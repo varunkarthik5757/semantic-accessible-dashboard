@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Accessible Forms and Settings Dashboard">
+  <title>Forms & Settings | Accessible Admin</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Accessibility skip link -->
+  <a href="#main-content" class="sr-only focus-visible">Skip to main content</a>
+
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar" aria-label="Sidebar Navigation">
+      <div class="sidebar-header">
+        <a href="index.html" class="sidebar-brand">
+          <span class="sidebar-brand-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          </span>
+          EnterDash
+        </a>
+      </div>
+      
+      <nav class="sidebar-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              Overview
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="forms.html" class="nav-link" aria-current="page">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              Forms &amp; Settings
+            </a>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" aria-haspopup="dialog" aria-expanded="false" id="trigger-modal">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              Open Modal
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="#" class="user-profile" aria-label="User profile for Jane Doe">
+          <div class="avatar" aria-hidden="true">JD</div>
+          <div class="user-info">
+            <span class="user-name">Jane Doe</span>
+            <span class="user-role">Administrator</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <!-- Top Navigation Header -->
+      <header class="app-header" aria-label="Top Header">
+        <div class="header-left">
+          <button id="sidebar-toggle" class="icon-btn" aria-label="Toggle Sidebar" aria-expanded="true" aria-controls="app-sidebar">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+        
+        <div class="header-search">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <label for="global-search" class="sr-only">Search dashboard</label>
+          <input type="search" id="global-search" class="search-input" placeholder="Search..." aria-label="Search dashboard">
+        </div>
+
+        <div class="header-actions">
+          <button class="icon-btn" aria-label="Notifications, 3 unread messages">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span class="badge" aria-hidden="true">3</span>
+          </button>
+          <button class="icon-btn" aria-label="Settings">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="main-content" class="page-content" tabindex="-1">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Forms &amp; Settings</h1>
+            <nav aria-label="Breadcrumb">
+              <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li aria-hidden="true">/</li>
+                <li><span aria-current="page">Forms</span></li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2">
+          <!-- Comprehensive Form Controls -->
+          <section class="card" aria-labelledby="form-heading">
+            <h2 id="form-heading" class="card-title">User Profile Settings</h2>
+            
+            <form id="profile-form" novalidate>
+              <div class="form-group">
+                <label for="first-name" class="form-label">First Name <span aria-hidden="true" class="text-danger" style="color:var(--accent-danger)">*</span></label>
+                <input type="text" id="first-name" name="first-name" class="form-control" required aria-required="true" autocomplete="given-name" aria-describedby="fname-error">
+                <div id="fname-error" class="form-text" style="color:var(--accent-danger); display:none;" role="alert">First name is required.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="last-name" class="form-label">Last Name <span aria-hidden="true" class="text-danger" style="color:var(--accent-danger)">*</span></label>
+                <input type="text" id="last-name" name="last-name" class="form-control" required aria-required="true" autocomplete="family-name">
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address <span aria-hidden="true" class="text-danger" style="color:var(--accent-danger)">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" required aria-required="true" autocomplete="email" aria-describedby="email-hint">
+                <span id="email-hint" class="form-text">We'll never share your email with anyone else.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="role-select" class="form-label">User Role</label>
+                <select id="role-select" name="role" class="form-control">
+                  <option value="user">Standard User</option>
+                  <option value="editor">Editor</option>
+                  <option value="admin">Administrator</option>
+                </select>
+              </div>
+
+              <fieldset>
+                <legend>Communication Preferences</legend>
+                <div class="form-text" style="margin-bottom: 1rem;">Select how you would like to be contacted.</div>
+                
+                <div class="checkbox-group">
+                  <input type="checkbox" id="pref-email" name="preferences" value="email" checked>
+                  <label for="pref-email">Email Notifications</label>
+                </div>
+                
+                <div class="checkbox-group">
+                  <input type="checkbox" id="pref-sms" name="preferences" value="sms">
+                  <label for="pref-sms">SMS Alerts</label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Account Privacy</legend>
+                
+                <div class="checkbox-group">
+                  <input type="radio" id="privacy-public" name="privacy" value="public">
+                  <label for="privacy-public">Public Profile</label>
+                </div>
+                
+                <div class="checkbox-group">
+                  <input type="radio" id="privacy-private" name="privacy" value="private" checked>
+                  <label for="privacy-private">Private Profile</label>
+                </div>
+              </fieldset>
+
+              <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+                <button type="reset" class="btn btn-secondary">Reset</button>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+              </div>
+            </form>
+          </section>
+
+          <!-- Instructions or other content side panel -->
+          <aside class="card" aria-labelledby="guidelines-heading">
+            <h2 id="guidelines-heading" class="card-title">Accessibility Guidelines Followed</h2>
+            <ul style="padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><strong>Semantic Tags:</strong> Proper use of <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> for grouping related controls.</li>
+              <li><strong>Labeling:</strong> Every input has an explicit associated <code>&lt;label&gt;</code> element.</li>
+              <li><strong>Required Fields:</strong> Form inputs use <code>aria-required="true"</code> and visually indicate requirement without relying solely on color.</li>
+              <li><strong>Error Identification:</strong> Form validation alerts are linked to inputs via <code>aria-describedby</code> and have <code>role="alert"</code>.</li>
+              <li><strong>Focus Indication:</strong> Visible focus rings for all interactive elements via <code>:focus-visible</code> styles.</li>
+              <li><strong>Contrast Ratio:</strong> Text and background colors meet WCAG 2.1 AA requirements.</li>
+            </ul>
+          </aside>
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        <p>&copy; <time datetime="2024">2024</time> Accessible Admin Inc. All rights reserved.</p>
+        <nav aria-label="Footer Links">
+          <ul style="list-style: none; display: flex; gap: 1rem;">
+            <li><a href="#" style="color: inherit; text-decoration: none;">Privacy Policy</a></li>
+            <li><a href="#" style="color: inherit; text-decoration: none;">Terms of Service</a></li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Modal Dialog -->
+  <div id="example-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+    <div class="modal-dialog">
+      <header class="modal-header">
+        <h2 id="modal-title" class="modal-title">System Alert</h2>
+        <button type="button" class="modal-close" aria-label="Close dialog" id="close-modal-header">
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </header>
+      <div class="modal-body">
+        <p>This is an accessible modal dialog. Keyboard focus is trapped within the dialog when it is open, and restored to the triggering element when closed.</p>
+      </div>
+      <footer class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="close-modal-footer">Cancel</button>
+        <button type="button" class="btn btn-primary" id="confirm-modal">Acknowledge</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
